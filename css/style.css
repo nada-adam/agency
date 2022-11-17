@@ -1,0 +1,435 @@
+@import url('https://fonts.googleapis.com/css2?family=Cairo:wght@200;300;400;500;600;700;800;900&family=El+Messiri:wght@500&display=swap');
+*{
+    padding:0;
+    margin:0;
+}
+body{
+    font-family: 'Cairo', sans-serif;
+}
+header{
+    background-image: url(../image/bg.jpg);
+    background-size:cover;
+    background-position: center;
+}
+header .overlay{
+    background: linear-gradient( to right, rgba(46, 178, 181, 0.8), rgba(197, 203, 50, 0.8)) ;
+    min-height: 100vh;
+}
+nav.navbar{
+    z-index:15;
+}
+nav.navbar .navbar-brand img{
+    width:80%;
+}
+nav.navbar .navbar-nav .nav-item a.nav-link{
+    font-size: 16px;
+    color:#e8e8e8;
+    padding: 0px 16px;
+    transition: all 0.5 ease;
+    line-height: 40px;
+}
+nav.navbar .navbar-nav .nav-item a.nav-link:hover,nav.navbar .navbar-nav .nav-item a.nav-link.active{
+    background-color: #e8e8e8;;
+    color:#16aeca;
+}
+
+/*need more focus*/
+nav.navbar.noTransparrent {
+    background-color: #fff;
+    border: 1px solid #eee;
+}
+
+nav.navbar.noTransparrent .nav-item a.nav-link {
+    color: #16aeca;
+}
+
+nav.navbar.noTransparrent .navbar-nav .nav-item a.nav-link:hover,
+nav.navbar.noTransparrent .navbar-nav .nav-item a.nav-link.active {
+    color: #dae413;
+    background-color: #16aeca;
+}
+
+nav.navbar.noTransparrent button.navbar-toggler {
+    color: #16aeca;
+}
+/*!! focus*/
+header .overlay .carousel .carousel-item {
+    min-height: 100vh;
+    position: relative;
+}
+
+header .overlay .carousel .carousel-item .carousel-content {
+    position: absolute;
+    top: 40%;
+    right: 15%;
+    left: 15%;
+    text-align: center;
+    z-index: 10;
+}
+
+header .overlay .carousel .carousel-item .carousel-content h2 {
+    font-size: 40px;
+    line-height: 52px;
+    margin-bottom: 60px;
+    color: #fff;
+}
+
+header .overlay .carousel .carousel-item .carousel-content a {
+    padding: 13px 47px;
+    background-color: #16aeca;
+    color: #fff;
+    font-size: 18px;
+    border-radius: 30px;
+    text-decoration: none;
+    transition: all 0.5s ease;
+}
+
+header .overlay .carousel .carousel-item .carousel-content a:hover {
+    background-color: #dae413;
+    color: #555;
+}
+
+
+section.services {
+    padding: 80px 0;
+    min-height: 700px;
+}
+section.services .services-title h3{
+    font-size:40px;
+    color:#070c0c;
+    margin-bottom:50px;
+}
+section.services .card{
+    height: 330px;
+    padding: 50px;
+    margin-bottom: 50px;
+    transition: all 1s ease-in-out;
+}
+section.services .card .card-img {
+    margin-bottom: 45px;
+}
+
+
+/*زيادة طول الكرت*/
+section.services .card:hover {
+    height: 400px;
+}
+section.services .card .card-block h4 {
+    font-size: 24px;
+    color: #070c0c;
+    margin-bottom: 25px;
+}
+
+section.services .card .card-block p {
+    font-size: 15px;
+    line-height: 21px;
+    color: #919191;
+    opacity: 0;
+    transition: all 1.5s ease;
+}
+section.services .card:hover .card-block p {
+    opacity: 1;
+}
+section.gallery .gallery-title h3 {
+    font-size: 40px;
+    color: #070c0c;
+    margin-bottom: 60px;
+}
+
+section.gallery .gallery-work a.gallery-link{
+    position:relative;
+   display: block;
+}
+section.gallery .gallery-work .gallery-link img{ 
+    width:100%;
+}
+section.gallery .gallery-work .gallery-link .gallery-hover{
+    position:absolute;
+    width:90%;
+    height: 90%;
+    top:5%;
+    left:5%;
+    background-color: rgba(22, 174, 202, 0.9);
+    color:#fff;
+    opacity:0;
+    z-index: 5;
+    transition: all 0.5s ease;
+   }
+
+  section.gallery .gallery-work .gallery-link .gallery-hover i{
+    position:absolute;
+    bottom:50%;
+    right:50%;
+    font-size: 36px;
+    transform: translate(50%, 50%);
+
+  }
+  section.gallery .gallery-work a.gallery-link:hover .gallery-hover{
+    opacity:1;
+  }
+
+
+
+  /*overlay/* بناء هيكلية طبقة تفاصيل العمل*/
+  section.gallery .gallery-work .gallery-overlay{
+    background-color: rgba(0,0,0,0.9);
+    position:fixed;
+    right:0;
+    top:0;
+    width:100%;
+    height:100vh;
+    z-index:30;
+    padding:5% 10%;
+    opacity:0;
+    margin-top: -100vh;
+    transition: all 1s ease;
+  }
+  section.gallery .gallery-work .gallery-overlay:target{
+    opacity:1;
+    margin-top:0;
+  }
+  section.gallery .gallery-work .gallery-overlay img{
+    width:100%;
+  }
+  section.gallery .gallery-overlay .overlay-text{
+  margin-top: 10%;
+  }
+  section.gallery .gallery-overlay .overlay-text h4{
+     font-size:36px;
+     color: #16aeca;
+     margin-bottom: 30px;
+  }
+  section.gallery .gallery-overlay .overlay-text ul{
+    padding:20px;
+    margin-bottom: 20px;
+    border-bottom: 1px solid #efefef;
+  }
+  section.gallery .gallery-overlay .overlay-text .list-inline li a{
+    color:#555;
+   text-decoration: none;
+    font-family: sans-serif;
+  }
+  section.gallery .gallery-overlay .overlay-text p{
+    color: #919191;
+    font-size: 24px;
+    margin-bottom: 50px;
+    line-height: 33px;
+  }
+  section.gallery .gallery-overlay .overlay-text a.btn{
+    background-color:#16aeca;
+    color:#fff;
+    border-radius: 25px;
+    padding: 0px 30px;
+    border:0;
+    line-height: 50px;
+  }
+  section.gallery .gallery-overlay .overlay-text a.close{
+    position:absolute;
+    top:4%;
+    left:10%;
+    color: #16aeca;
+    font-size: 30px;
+    font-weight: bold;
+    text-decoration:none;
+  }
+
+  /*static قسم الاحصائيات*/
+  
+  section.statistics{
+    background-image: url(../image/bg2.jpg);
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+  }
+  section.statistics .overlayer{
+    background-color:rgba(22, 174, 202, 0.8);
+    padding: 101px 0 140px;
+  }
+  section.statistics .overlayer .count{
+    font-size:40px;
+    color:#fff;
+    margin:50px 0 30px;
+    font-weight: bold;
+  }
+  section.statistics .overlayer .counter{
+    font-size:18;
+    color: #85ecff;
+   line-height: 2px;
+  }
+  section.contacts {
+    padding:100px 0 60px;
+
+  }
+
+  /*قسم التواصل والخريطة*/
+section.contacts .map iframe{
+    width: 90%;
+    height:200px;
+}
+section.contacts .contact-addresses h4 {
+    font-size: 24px;
+    color: #181c1c;
+    margin-bottom: 40px;
+}
+section.contacts .contact-addresses ul{
+    list-style: none;
+    padding: 0;
+}
+section.contacts .contact-addresses ul li {
+    color: #16aeca;
+    font-size: 18px;
+    line-height: 25px;
+    margin-bottom: 25px;
+}
+section.contacts .contact-addresses li address{
+    display: inline;
+    
+}
+
+
+/*قسم الادخال*/
+
+section.contacts .contact-text {
+    margin: 60px auto 22px;
+}
+section.contacts .contact-text h3{
+    color:#181c1c;
+    font-size: 24x;
+    margin-bottom: 24px;
+    font-weight: bold;
+}
+section.contacts .contact-form {
+width:60%; /*عرض النموذج فشاشه*/
+margin: auto; /*توسيط النموذج*/
+}
+section.contacts .contact-form input,section.contacts .contact-form textarea{
+    background-color: #f7f7f7;
+    color:#5c5c5c;
+    border:2px solid #ececec;
+    font-size: 15px;
+    text-align: right;
+}
+section.contacts .contact-form button{
+    padding:10px 30px;
+    font-size:15px;
+    background-color: #16aeca;
+    color: #fff;
+    width:auto;
+    margin-right: 12px;
+    border-radius: 3px;
+}
+footer.footer {
+    padding:73px;
+    background-color:#171717;
+}
+footer.footer .top-footer h5{
+    font-size:18;
+    color: #16aeca;
+    margin-bottom: 60px;
+    line-height: 21px;
+    position: relative;
+}
+footer.footer .top-footer h5::after{
+    content:"";
+    position:absolute;
+    bottom:-18px;
+    right:0;
+    width:35px;
+    height: 2px;
+    background-color:#5c5c5c;
+}
+footer.footer .top-footer .about-us p{
+    font-size:15px;
+    line-height: 22px;
+    margin-bottom: 60px;
+    color: #919191;
+}
+footer.footer .top-footer .about-us ul li a {
+    width:35px;
+    height: 35px;
+    line-height: 35px;
+    background-color: #333333;
+    color: #fff;
+    text-align: center;
+    border-radius: 2px;
+    transition: in 0.5s ease;
+    display: block;
+
+}
+footer.footer .top-footer .about-us ul a:hover{
+    background-color: #16aeca;
+    color: #fff;
+}
+ footer.footer ul.contact-list{
+    list-style: none;
+    padding: 0;
+ }
+ footer.footer  .top-footer .contact-list li{
+    font-size: 18px;
+    color: #919191;
+    margin-bottom: 35px;
+ }
+ footer.footer .top-footer ul.contact-list li i {
+    width: 35px;
+    height: 35px;
+    line-height: 35px;
+    text-align: center;
+    background-color: #282828;
+    color: #acacac;
+    border-radius: 2px;
+    margin-left: 15px;
+}
+footer.footer .copyright{
+    background-color: #111111;
+    padding: 30px 0;
+}
+footer.footer .copyright p{
+    color: #acacac;
+    font-size:15px;
+    text-align: center;
+}
+@media (max-width:992px){
+    section.services .card {
+        padding: 21px;
+        height: 420px;
+
+    }
+    section.services .services-title h3 {
+        font-size: 20px;
+        margin-bottom: 15px;
+    }
+    section.services .card .card-block p {
+        opacity:1;
+    }
+    section.services .card .card-img {
+        margin-bottom: 35px;
+    }
+    section.contacts .map iframe {
+        width: 100%;
+    }
+    section.contacts .contact-form {
+        width: 80%;
+}
+}
+@media(max-width:768px){
+    section.gallery .gallery-work .gallery-overlay {
+        margin-top: -170vh;
+    }
+
+    section.gallery .gallery-work .gallery-overlay .overlay-img {
+        display: none;
+    }
+
+
+
+
+    section.contacts .map{
+        margin-bottom: 30px;
+    }
+}
+@media (max-width: 576px) {
+    header .overlay .carousel button {
+        display: none;
+    }
+
+}
